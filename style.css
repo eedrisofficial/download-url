@@ -1,0 +1,40 @@
+body {
+  background-color: #003;
+  color: #fff;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 100vh;
+}
+
+input {
+  padding: 15px;
+  width: 40%;
+  border: 4px solid rgb(9, 208, 85);
+  outline: none;
+}
+
+input:focus {
+  border: 4px solid coral;
+}
+
+button {
+  padding: 12px;
+  width: 10%;
+  background-color: coral;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(196, 74, 30);
+  transition: 0.35s;
+}
