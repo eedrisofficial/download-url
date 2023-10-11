@@ -1,15 +1,15 @@
 const urlInput = document.getElementById("url");
 const downloadButton = document.getElementById("btn");
 
-downloadButton.addEventListener("click", handleDownload);
+downloadButton.addEventListener("click", handleDownloadButton);
 
-async function handleDownload() {
+async function handleDownloadButton() {
   try {
-    const res = await fetch(urlInput.value);
-    const downloadFile = await res.blob();
+    const response = await fetch(urlInput.value);
+    const downloadFile = await response.blob();
     const link = document.createElement("a");
     link.href = URL.createObjectURL(downloadFile);
-    link.download = new Date().getTime().toString();
+    link.download = new Date().getTime();
     link.click();
     alert("Downloading.....");
   } catch (error) {

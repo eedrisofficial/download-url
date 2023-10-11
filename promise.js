@@ -22,7 +22,7 @@ function downloadBlob(blob, filename) {
 
 downloadButton.addEventListener("click", () => {
   const url = urlInput.value;
-  const filename = new Date().getTime().toString();
+  const filename = new Date().getTime();
 
   fetchFile(url)
     .then((downloadFile) => {
@@ -31,4 +31,7 @@ downloadButton.addEventListener("click", () => {
     .catch((error) => {
       console.error("An error occurred:", error);
     });
+
+  alert("Downloading...");
+  urlInput.value = "";
 });
